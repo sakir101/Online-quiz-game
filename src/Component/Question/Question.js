@@ -1,6 +1,8 @@
 import React from 'react';
 import './Question.css'
 import { BeakerIcon, EyeIcon } from '@heroicons/react/24/solid'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 let q = 0;
 
 
@@ -11,17 +13,17 @@ const Question = ({ ques, corrAns, incorr1 }) => {
     const check = e => {
         const { value, name } = e.target;
         if (value === name) {
-            alert("Correct")
+            toast("Wow your answer is correct")
             corrAns()
         }
         else {
-            alert("Incorrect")
+            toast("Oops sorry wrong answer")
             incorr1()
         }
     }
 
     const showCorrectAns = () =>{
-        alert(`${correctAnswer}`)
+        toast(`Correct answer is ${correctAnswer}`)
     }
 
     return (
@@ -55,7 +57,9 @@ const Question = ({ ques, corrAns, incorr1 }) => {
 
 
                 </div>
+                <ToastContainer />
             </div>
+            
         </div>
 
     );
