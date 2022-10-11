@@ -1,0 +1,17 @@
+.div-cl{
+    border: 2px solid rgb(141, 112, 112);
+    border-radius: 15px;
+    background-color: rgb(82, 191, 191);
+}
+
+.img-cl{
+    height: 200px;
+    width: 200px;
+}
+
+/* .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ */

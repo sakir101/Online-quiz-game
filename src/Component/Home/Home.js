@@ -1,7 +1,10 @@
 import React from 'react';
+
+import Carts from '../Carts/Carts';
 import './Home.css'
 
 const Home = () => {
+    
     return (
         <div>
             <div className='bg-img'>
@@ -12,7 +15,9 @@ const Home = () => {
                 
             </div>
 
-            
+            <div >
+            <Carts></Carts>
+            </div>
         </div>
     );
 };
