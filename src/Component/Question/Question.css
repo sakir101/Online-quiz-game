@@ -4,3 +4,17 @@
     border-radius: 15px;
     
 }
+
+.ques{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.icon{
+    height: 20px;
+    margin-left: 500px;
+    color: blue;
+    
+}

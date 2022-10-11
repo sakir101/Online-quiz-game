@@ -4,6 +4,7 @@ import Question from '../Question/Question';
 
 const CartDetail = () => {
     const cartInfo = useLoaderData()
+    
     const [corr, setCorr] = useState(0)
     const [incorr, setIncorr] = useState(0)
    
@@ -17,6 +18,7 @@ const CartDetail = () => {
    
     return (
         <div className='my-2 p-5'>
+            <h2 className='text-primary'>{cartInfo.data.name}</h2>
             <h3>Total Correct: {corr} </h3>
             <h3>Total Incorrect: {incorr}</h3>
             {
