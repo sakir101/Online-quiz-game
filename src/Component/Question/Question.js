@@ -1,6 +1,6 @@
 import React from 'react';
 import './Question.css'
-import { BeakerIcon, EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 let q = 0;
