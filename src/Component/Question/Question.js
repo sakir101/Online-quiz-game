@@ -11,7 +11,7 @@ const Question = ({ ques, corrAns, incorr1 }) => {
 
     const { id, question, correctAnswer, options } = ques;
     const [state, setState] = useState(false)
-    q=q+1;
+   
     const check = e => {
         const { value, name } = e.target;
         if (value === name) {
