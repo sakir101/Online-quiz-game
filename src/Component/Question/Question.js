@@ -72,4 +72,3 @@ const Question = ({ ques, corrAns, incorr1, p}) => {
 export default Question;
 
 
-// sakir hossain farque
