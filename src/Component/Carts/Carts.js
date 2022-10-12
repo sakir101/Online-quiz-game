@@ -4,7 +4,7 @@ import Cart from '../Cart/Cart';
 
 const Carts = () => {
     const carts = useLoaderData();
-   
+
 
 
     return (

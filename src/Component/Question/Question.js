@@ -11,7 +11,7 @@ const Question = ({ ques, corrAns, incorr1 }) => {
 
     const { id, question, correctAnswer, options } = ques;
     const [state, setState] = useState(false)
-   
+
     const check = e => {
         const { value, name } = e.target;
         if (value === name) {
@@ -27,46 +27,46 @@ const Question = ({ ques, corrAns, incorr1 }) => {
     }
 
 
-    const showCorrectAns = () =>{
+    const showCorrectAns = () => {
         toast(`Correct answer is ${correctAnswer}`)
     }
 
-    
+
     return (
         <div>
             <div className='question-container my-4 p-4 shadow-sm position-relative'>
-               
-                    <h4>{question}</h4>
-                   <EyeIcon className=" icon text-blue-500 position-absolute top-0 end-0" onClick={showCorrectAns}/>
-                
+
+                <h4>{question}</h4>
+                <EyeIcon className=" icon text-blue-500 position-absolute top-0 end-0" onClick={showCorrectAns} />
+
 
                 <div className='container'>
                     <div>
                         <div className='ques'>
-                            <input type="radio" id={options[0]} value={options[0]} name={correctAnswer} onChange={check} disabled={state}/>
+                            <input type="radio" id={options[0]} value={options[0]} name={correctAnswer} onChange={check} disabled={state} />
                             <label htmlFor="">{options[0]}</label>
 
                         </div>
                         <div className='ques'>
-                            <input type="radio" id={options[1]} value={options[1]} name={correctAnswer} onChange={check} disabled={state}/>
+                            <input type="radio" id={options[1]} value={options[1]} name={correctAnswer} onChange={check} disabled={state} />
                             <label htmlFor="">{options[1]}</label>
                         </div>
                         <div className='ques'>
-                            <input type="radio" id={options[2]} value={options[2]} name={correctAnswer} onChange={check} disabled={state}/>
+                            <input type="radio" id={options[2]} value={options[2]} name={correctAnswer} onChange={check} disabled={state} />
                             <label htmlFor="">{options[2]}</label>
                         </div>
                         <div className='ques'>
-                            <input type="radio" id={options[3]} value={options[3]} name={correctAnswer} onChange={check} disabled={state}/>
+                            <input type="radio" id={options[3]} value={options[3]} name={correctAnswer} onChange={check} disabled={state} />
                             <label htmlFor="">{options[3]}</label>
                         </div>
                     </div>
 
 
                 </div>
-                
+
                 <ToastContainer />
             </div>
-            
+
         </div>
 
     );
