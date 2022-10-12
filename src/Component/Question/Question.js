@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Question.css'
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 let q = 0;
 
 
 const Question = ({ ques, corrAns, incorr1 }) => {
 
     const { id, question, correctAnswer, options } = ques;
-
+    const [state, setState] = useState(false)
     const check = e => {
         const { value, name } = e.target;
         if (value === name) {
+            setState(true);
             toast("Wow your answer is correct")
             corrAns()
         }
         else {
+            setState(true)
             toast("Oops sorry wrong answer")
             incorr1()
         }
@@ -25,6 +28,7 @@ const Question = ({ ques, corrAns, incorr1 }) => {
     const showCorrectAns = () =>{
         toast(`Correct answer is ${correctAnswer}`)
     }
+
 
     return (
         <div>
@@ -35,22 +39,22 @@ const Question = ({ ques, corrAns, incorr1 }) => {
                 
 
                 <div className='container'>
-                    <div className='row'>
-                        <div className='col-12 ques'>
-                            <input type="radio" id={options[0]} value={options[0]} name={correctAnswer} onChange={check} />
+                    <div>
+                        <div className='ques'>
+                            <input type="radio" id={options[0]} value={options[0]} name={correctAnswer} onChange={check} disabled={state}/>
                             <label htmlFor="">{options[0]}</label>
 
                         </div>
-                        <div className='col-12 ques'>
-                            <input type="radio" id={options[1]} value={options[1]} name={correctAnswer} onChange={check} />
+                        <div className='ques'>
+                            <input type="radio" id={options[1]} value={options[1]} name={correctAnswer} onChange={check} disabled={state}/>
                             <label htmlFor="">{options[1]}</label>
                         </div>
-                        <div className='col-12 ques'>
-                            <input type="radio" id={options[2]} value={options[2]} name={correctAnswer} onChange={check} />
+                        <div className='ques'>
+                            <input type="radio" id={options[2]} value={options[2]} name={correctAnswer} onChange={check} disabled={state}/>
                             <label htmlFor="">{options[2]}</label>
                         </div>
-                        <div className='col-12 ques'>
-                            <input type="radio" id={options[3]} value={options[3]} name={correctAnswer} onChange={check} />
+                        <div className='ques'>
+                            <input type="radio" id={options[3]} value={options[3]} name={correctAnswer} onChange={check} disabled={state}/>
                             <label htmlFor="">{options[3]}</label>
                         </div>
                     </div>

@@ -7,9 +7,9 @@
 
 .ques{
     border: 1px solid blueviolet;
-    padding: 10px;
-    margin: 5px;
+    padding: 10px;  
     border-radius: 10px;
+    margin: 5px;
 }
 
 .icon{
@@ -18,3 +18,4 @@
     color: blue;
     
 }
+
