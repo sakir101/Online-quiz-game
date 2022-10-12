@@ -18,7 +18,7 @@ const CartDetail = () => {
     let p=0;
     return (
         <div className='my-2 p-5'>
-            <h2 className='text-primary'>{cartInfo.data.name}</h2>
+            <h2 className='text-primary'>Quiz of {cartInfo.data.name}</h2>
             <h3>Total Correct: {corr} </h3>
             <h3>Total Incorrect: {incorr}</h3>
             {

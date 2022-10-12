@@ -53,7 +53,7 @@ function App() {
       ]
     },
     { path: '/abouts', element: <About></About> },
-    { path: '*', element: <div>404 Page Not Found!</div> }
+    { path: '*', element: <div>404 Page Not Found! About is unable to reach</div> }
   ])
   return (
     <div className="App">
