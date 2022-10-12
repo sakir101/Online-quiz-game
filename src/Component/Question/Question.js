@@ -4,14 +4,11 @@ import { EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
-const Question = ({ ques, corrAns, incorr1 }) => {
+const Question = ({ ques, corrAns, incorr1,p}) => {
 
     const { id, question, correctAnswer, options } = ques;
     const [state, setState] = useState(false)
-
+    
     const check = e => {
         const { value, name } = e.target;
         if (value === name) {
@@ -30,13 +27,13 @@ const Question = ({ ques, corrAns, incorr1 }) => {
     const showCorrectAns = () => {
         toast(`Correct answer is ${correctAnswer}`)
     }
-
+    
 
     return (
         <div>
             <div className='question-container my-4 p-4 shadow-sm position-relative'>
 
-                <h4>{question}</h4>
+                <h4><span className='text-primary'>Ques: {p}</span>{question}</h4>
                 <EyeIcon className=" icon text-blue-500 position-absolute top-0 end-0" onClick={showCorrectAns} />
 
 

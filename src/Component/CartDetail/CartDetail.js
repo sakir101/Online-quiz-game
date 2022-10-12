@@ -15,14 +15,14 @@ const CartDetail = () => {
     const incorr1 = () => {
         setIncorr(incorr + 1)
     }
-
+    let p=0;
     return (
         <div className='my-2 p-5'>
             <h2 className='text-primary'>{cartInfo.data.name}</h2>
             <h3>Total Correct: {corr} </h3>
             <h3>Total Incorrect: {incorr}</h3>
             {
-                cartInfo.data.questions.map(ques => <Question key={ques.id} ques={ques} corrAns={corrAns} incorr1={incorr1}></Question>)
+                cartInfo.data.questions.map(ques => <Question key={ques.id} ques={ques} corrAns={corrAns} incorr1={incorr1}p={p=p+1}></Question>)
             }
         </div>
     );
