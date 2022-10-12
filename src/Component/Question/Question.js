@@ -4,7 +4,7 @@ import { EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Question = ({ ques, corrAns, incorr1,p}) => {
+const Question = ({ ques, corrAns, incorr1, p}) => {
 
     const { id, question, correctAnswer, options } = ques;
     const [state, setState] = useState(false)
@@ -13,12 +13,12 @@ const Question = ({ ques, corrAns, incorr1,p}) => {
         const { value, name } = e.target;
         if (value === name) {
             setState(true);
-            toast("Wow your answer is correct")
+            toast("Wow your Answer is correct")
             corrAns()
         }
         else {
             setState(true)
-            toast("Oops sorry wrong answer")
+            toast("Oops sorry wrong Answer")
             incorr1()
         }
     }
